@@ -60,10 +60,10 @@ class TestUser(unittest.TestCase):
             test_delete_contact to test if we can remove a contact from our contact list
             '''
             self.new_user.save_user()
-            test_contact = Contact("Test","user","0712345678","test@user.com") # new contact
-            test_contact.save_contact()
+            test_user = User("Test","username","password") # new contact
+            test_user.save_user()
 
-            self.new_contact.delete_contact()# Deleting a contact object
-            self.assertEqual(len(Contact.contact_list),1)
+            self.new_user.delete_user()# Deleting a contact object
+            self.assertEqual(len(User.user_list),1)
 if __name__ == '__main__':
     unittest.main()
