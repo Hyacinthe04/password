@@ -13,7 +13,7 @@ As a user, I also want to view my various account credentials and their password
 As a user, I want to delete a credentials account that I no longer need in the application.
 
 
-#project setup instructions
+# project setup instructions
 -ubuntu -google chrome -js code -bootstrap
 
 #link to live site on GitHub Pages
