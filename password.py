@@ -30,21 +30,23 @@ class User:
 
         User.user_list.remove(self)    
 
-    # @classmethod
-    # def find_by_username(cls,username):
-    #     '''
-    #     Method that takes in a number and returns a contact that matches that number.
+    @classmethod
+    def user_exist(cls,username):
 
-    #     Args:
-    #         number: Phone number to search for
-    #     Returns :
-    #         Contact of person that matches the number.
-    #     '''
+        '''
+        Method that checks if a contact exists from the contact list.
+        Args:
+            number: Phone number to search if it exists
+        Returns :
+            Boolean: True or false depending if the contact exists
+        '''
+        for user in cls.user_list:
 
-    #     for username in cls.username_list:
-    #         if user.username == password:
-    #             return user
-
-
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.user_list
  
    
