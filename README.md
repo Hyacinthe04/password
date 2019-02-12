@@ -19,7 +19,7 @@ As a user, I want to delete a credentials account that I no longer need in the a
 # link to live site on GitHub Pages
 https://github.com/Hyacinthe04/password
 
-#copyright and license information
+# copyright and license information
 This project is licensed under the MIT license.
 
 Copyright (c) 2019 {Hyacinthe Ndayiragije}
