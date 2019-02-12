@@ -82,11 +82,23 @@ class TestCredential(unittest.TestCase):
 
     def test_display_all_credential(self):
         '''
-        method that returns a list of all contacts saved
+        method that returns a list of all credentials saved
         '''
 
         self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+    
+    def test_find_credential_by_username(self):
+        '''
+        test to check if we can find a credential by username and display information
+        '''
 
+        self.new_credential.save_credential()
+        test_credential = Credential("account","username","0123") # new credential 
+        test_credential.save_credential()
+
+        found_credential = Credential.find_by_username("hyacinthe")
+
+        self.assertEqual(found_credential.password,test_credential.password)
 
 if __name__ == '__main__':
     unittest.main()

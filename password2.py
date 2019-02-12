@@ -53,3 +53,20 @@ class Credential:
         method that returns the contact list
         '''
         return cls.credential_list
+
+    @classmethod
+    def find_by_username(cls,username):
+        '''
+        Method that takes in a number and returns a contact that matches that number.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            Contact of person that matches the number.
+        '''
+
+        for credential in cls.credential_list:
+            if credential.username == username:
+                return credential
+    
+    
