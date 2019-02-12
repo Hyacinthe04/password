@@ -1,12 +1,16 @@
-from credential import Credential
-def create_credential(account,username,password):
+#!/usr/bin/env python3.6
+from password2 import Credential
+
+def create_credential(account, username, password):
+
     '''
     Function to create a new contact
     '''
     new_credential = Credential(account,username,password)
     return new_credential
 
-def save_contacts(credential):
+def save_credential(credential):
+
     '''
     Function to save contact
     '''
@@ -16,7 +20,7 @@ def del_credential(credential):
     '''
     Function to delete a contact
     '''
-   credential.delete_credential()
+    credential.delete_credential()
 
 def find_credential(username):
     '''
@@ -38,42 +42,44 @@ def display_credentials():
 
 
 def main():
-    print("Hello Welcome to your credential list. What is your name?")
-            username = input()
+    print("Hello Welcome to your contact list. What is your name?")
 
-            print(f"Hello {username}. what would you like to do?")
-            print('\n')
+    username = input()
 
-            while True:
-                    print("Use these short codes : cc - create a new credential, dc - display contacts, fc -find a contact, ex -exit the contact list ")
+    print(f"Hello {username}. what would you like to do?")
+    print('\n')
 
-                    short_code = input().lower()
+    while True:
+            print("Use these short codes : cc - create a new credential, dc - display credentials, fc -find a credential, ex -exit the credential list ")
 
-                    if short_code == 'cc':
-                            print("New Credential")
-                            print("-"*10)
+            short_code = input().lower()
 
-                            print ("account ....")
-                            account = input()
+            if short_code == 'cc':
+                    print("New Credential")
+                    print("-"*10)
 
-                            print("username ...")
-                            username = input()
+                    print ("acoount ....")
+                    account = input()
 
-                            print("password ...")
-                            password = input()
+                    print("username ...")
+                    username = input()
 
-                           
+                    print("password ...")
+                    password = input()
+
+                            # print("Email address ...")
+                            # e_address = input()
 
 
-                            save_credentials(create_credential(account,username,password)) # create and save new contact.
-                            print ('\n')
-                            print(f"New Credential {username} {password} created")
-                            print ('\n')
+                    save_credentials(create_credential(account,username,password)) # create and save new credential.
+                    print ('\n')
+                    print(f"New Credential {account}  {username} {password} created")
+                    print ('\n')
 
                     elif short_code == 'dc':
 
                             if display_credentials():
-                                    print("Here is a list of all your contacts")
+                                    print("Here is a list of all your redentials")
                                     print('\n')
 
                                     for credential in display_credentials():
@@ -82,7 +88,7 @@ def main():
                                     print('\n')
                             else:
                                     print('\n')
-                                    print("You dont seem to have any credentials saved yet")
+                                    print("You dont seem to have any contacts saved yet")
                                     print('\n')
 
                     elif short_code == 'fc':
@@ -92,16 +98,19 @@ def main():
                             search_username = input()
                             if check_existing_credentials(search_username):
                                     search_credential = find_credential(search_username)
-                                    print(f"{search_credential.first_name} {search_credential.last_name}")
+                                    print(f"{search_credential.username} {search_credential.password}")
                                     print('-' * 20)
 
-                                    print(f"Phone number.......{search_credential.phone_number}")
-                                    print(f"Email address.......{search_credential.email}")
+                                    print(f"username.......{search_credential.username}")
+                                    print(f"password.......{search_credential.password}")
                             else:
-                                    print("That credential does not exist")
+                                    print("That credentialdoes not exist")
 
                     elif short_code == "ex":
                             print("Bye .......")
                             break
                     else:
                             print("I really didn't get that. Please use the short codes")
+if __name__ == '__main__':
+
+    main()
