@@ -14,7 +14,10 @@ As a user, I want to delete a credentials account that I no longer need in the a
 
 
 # project setup instructions
--ubuntu -google chrome -js code -bootstrap
+-ubuntu 
+-google chrome 
+-js code 
+-bootstrap
 
 # link to live site on GitHub Pages
 https://github.com/Hyacinthe04/password
