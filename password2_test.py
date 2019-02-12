@@ -80,7 +80,7 @@ class TestCredential(unittest.TestCase):
 
         self.assertTrue(credential_exists)
 
-    def test_display_all_credentials(self):
+    def test_display_all_credential(self):
         '''
         method that returns a list of all contacts saved
         '''

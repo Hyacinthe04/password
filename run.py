@@ -70,9 +70,9 @@ def main():
                         
 
 
-                save_credentials(create_credential(account,username,password)) # create and save new credential.
+                save_credential(create_credential(account,username,password)) # create and save new credential.
                 print ('\n')
-                print(f"New Credential {account}  {username} {password} created")
+                print(f"New Credential {account} name: {username} {password} created")
                 print ('\n')
 
         elif short_code == 'dc':
@@ -89,7 +89,7 @@ def main():
                 print("You dont seem to have any contacts saved yet")
                 print('\n')
         elif short_code == 'fc':
-            print("Enter the number you want to search for")
+            print("Enter the usernane you want to search for")
 
             search_username = input()     
             if check_existing_credentials(search_username):
