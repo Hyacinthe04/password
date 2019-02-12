@@ -1,17 +1,16 @@
-class  Credentials:
+class Credential:
     """
     Class that generates new instances of contacts.
     """
 
-    credentials_list = [] # Empty user list
+    credential_list = [] # Empty user list
 
-    def __init__(account,username,password):
+    def __init__(self,account,username,password):
 
       # docstring removed for simplicity
-
+        self.account = account
         self.username = username
         self.password = password
-        self.account = account
-        
         
         user_list = [] # Empty contact list
+ # Init method up here
